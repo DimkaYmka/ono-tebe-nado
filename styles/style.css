@@ -1,1 +1,31 @@
 /* место для вашего кода */
+/* @import url(../blocks/header/header.css);
+@import url(../blocks/header/__info/header__info.css);
+@import url(../blocks/header/__item/header__item.css);
+@import url(../blocks/header/__list/header__list.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__navigation/header__navigation.css); */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__info {
+  list-style: none;
+}
+
+.header__item {
+  width: 240px;
+}
+
+.header__list {
+  display: flex;
+  margin: 0;
+  gap: 0;
+}
+
+.header__logo {
+  width: 148px;
+  height: 105px;
+}
