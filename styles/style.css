@@ -24,13 +24,17 @@
 }
 
 .header {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   padding: 96px 50px;
+  grid-template-columns: 1fr min-content 1fr;
 }
 
 .header__info {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .header__item {
@@ -68,7 +72,7 @@
 .header__logo {
   width: 148px;
   height: 105px;
-  margin-right: 145px;
+  /* margin-right: 145px; */
 }
 
 .cover {
@@ -95,7 +99,7 @@
 }
 
 .cover__title-span {
-  max-width: 1340px;
+  min-width: 1340px;
   margin: 0 50px;
   text-align: center;
   font-family: Raleway, sans-serif;
@@ -107,27 +111,29 @@
   text-transform: uppercase;
 }
 
-.cover__title-span:nth-child(1) {
+.cover__title-span-left {
   text-align: left;
   line-height: 115%;
 }
 
-.cover__title-span:nth-child(2) {
+.cover__title-span-center {
   text-align: center;
 }
 
-.cover__title-span:nth-child(3) {
+.cover__title-span-right {
   text-align: right;
   margin: 0 20px 0 80px;
 }
 
 .cover__description {
   text-align: right;
-  margin-top: 135px;
+  margin-top: 130px;
+  display: flex;
+  justify-content: end;
 }
 
 .cover__description-text {
-  display: inline;
+  display: flex;
   color: #fff;
   text-align: center;
   font-family: Raleway, sans-serif;
@@ -136,7 +142,9 @@
   font-weight: 400;
   line-height: 28px; /* 127.273% */
   text-transform: uppercase;
-  word-spacing: 15px;
+  word-spacing: 19px;
+  padding-top: 13px;
+  letter-spacing: 0.01em;
 }
 
 .cover__bet-button {
@@ -182,27 +190,24 @@
   gap: 25px;
   padding-bottom: 33px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* .lots__item {
-} */
+.lots__item {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .lots__item:nth-child(1) {
   background-image: url("../images/card-lot-01.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .lots__item:nth-child(2) {
   background-image: url("../images/card-lot-02.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .lots__item:nth-child(3) {
   background-image: url("../images/card-lot-03.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .lots__card-list-item {
@@ -308,7 +313,8 @@
   max-width: 1340px;
   display: flex;
   justify-content: space-between;
-  margin: 183px 50px 90px;
+  margin: 0 auto;
+  padding-top: 181px;
 }
 
 .footer__navigation {
